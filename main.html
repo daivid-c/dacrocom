@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Dacrocom | Engineering Solutions</title>
+
+    <!-- Favicon and touch icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon/favicon.ico"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+        background: #05070b;
+        color: #fff;
+        overflow: hidden;
+      }
+
+      /* animated background */
+
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 20% 20%,
+            rgba(37, 99, 235, 0.18),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(0, 180, 255, 0.12),
+            transparent 35%
+          );
+        animation: move 14s ease-in-out infinite alternate;
+        filter: blur(30px);
+      }
+
+      @keyframes move {
+        from {
+          transform: translate(-30px, -30px);
+        }
+        to {
+          transform: translate(30px, 20px);
+        }
+      }
+
+      .grid {
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+          );
+
+        background-size: 60px 60px;
+        mask-image: radial-gradient(circle, #fff 10%, transparent 90%);
+      }
+
+      .container {
+        position: relative;
+        z-index: 2;
+
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 40px;
+      }
+
+      .logo {
+        width: min(700px, 90vw);
+        margin: 30px auto 0px; /* pushes the logo down slightly */
+        display: block;
+
+        filter: drop-shadow(0 0 35px rgba(0, 140, 255, 0.15));
+      }
+
+      .tagline {
+        font-size: 1.35rem;
+        letter-spacing: 0.45rem;
+
+        color: #dfe7ef;
+        text-transform: uppercase;
+
+        margin-bottom: 18px;
+      }
+
+      .subtitle {
+        color: #93a4bb;
+
+        max-width: 700px;
+        margin: auto;
+
+        line-height: 1.8;
+        font-size: 1.05rem;
+      }
+
+      .divider {
+        width: 120px;
+        height: 2px;
+
+        margin: 45px auto;
+
+        background: #248cff;
+      }
+
+      .footer {
+        margin-top: 40px;
+
+        color: #708199;
+
+        font-size: 0.95rem;
+
+        letter-spacing: 0.15rem;
+      }
+
+      .footer strong {
+        color: white;
+        font-weight: 500;
+      }
+
+      .partner {
+        margin-top: 14px;
+        margin-bottom: 40px; /* adds breathing room at the bottom */
+
+        color: #8fa3bb;
+      }
+
+      .partner strong {
+        color: white;
+        font-weight: 500;
+      }
+
+      .pulse {
+        display: inline-block;
+
+        width: 8px;
+        height: 8px;
+
+        margin-right: 10px;
+
+        border-radius: 50%;
+        background: #2b8cff;
+
+        box-shadow: 0 0 18px #2b8cff;
+
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        50% {
+          transform: scale(1.8);
+          opacity: 0.4;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .tagline {
+          font-size: 1rem;
+          letter-spacing: 0.25rem;
+        }
+
+        .subtitle {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid"></div>
+
+    <div class="container">
+      <div>
+        <img
+          src="./assets/splash-logo.png"
+          class="logo"
+          alt="Dacrocom"
+        />
+
+        <div class="tagline">Engineering Solutions</div>
+
+        <div class="subtitle">
+          Helping enterprises modernize through cloud engineering, platform
+          architecture, software delivery and digital transformation.
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="footer">
+          <span class="pulse"></span>
+
+          Austin, Texas
+        </div>
+
+        <div class="partner">
+          In partnership with <strong>Capgemini</strong>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
